@@ -5,6 +5,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - json
 
 toc_footers:
+  - <a href='https://github.com/lprhodes/homebridge-broadlink-rm'>Back to GitHub</a>
 
 includes:
 

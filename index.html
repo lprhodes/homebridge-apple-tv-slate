@@ -248,6 +248,9 @@
                   <li>
                     <a href="#multiple-broadlink-rm-devices" class="toc-h2 toc-link" data-title="multiple-broadlink-rm-devices">Multiple Broadlink RM Devices</a>
                   </li>
+                  <li>
+                    <a href="#device-discovery" class="toc-h2 toc-link" data-title="device-discovery">Device Discovery</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -381,6 +384,25 @@
 <p>If you have multiple Broadlink RM devices (e.g. one in the bedroom, one in the lounge) then you can additionally specify the Broadlink RM&#39;s IP or MAC address in a <code>&quot;host&quot;</code> key/value pair on each accessory so that the accessory will use the correct device to send the IR or RF commands.</p>
 
 <p>If you wish to have multiple &quot;Learn Code&quot; accessories (e.g. for each device) then you can add accessories with a type of <code>learn-code</code> and then specify  <code>&quot;host&quot;</code> and <code>&quot;name&quot;</code> key/value pairs.</p>
+<h2 id='device-discovery'>Device Discovery</h2>
+<blockquote>
+<p>Include in the top of the platform config (not in any of the accessories).
+<code>json
+...
+    &quot;hosts&quot;: [
+      {
+        &quot;address&quot;: &quot;192.168.1.76&quot;,
+        &quot;mac&quot;: &quot;34:ea:34:e7:d7:28&quot;,
+        &quot;isRFSupported&quot;: true
+      }
+    ], 
+...
+</code></p>
+</blockquote>
+
+<p>Generally Broadlink RM devices should be detected automatically. I&#39;ve resolved many issues related to this in recent releases however if your network doesn&#39;t support UDP for whatever reason then your device still won&#39;t be discovered.</p>
+
+<p>To help combat this there&#39;s a <code>&quot;hosts&quot;</code> option that can be defined at the top level of the plugin config.</p>
 <h1 id='hex-codes'>Hex Codes</h1><h2 id='learning-ir-and-rf-hex-codes'>Learning IR and RF hex codes</h2>
 <blockquote>
 <p>Example &quot;Learn IR&quot; Logs</p>
@@ -1388,6 +1410,14 @@
 <tr>
 <td><code>sendTemperatureOnlyWhenOff</code></td>
 <td>When set, this will prevent the air-conditioner from being turned when setting a temperature while the air-conditioner is off.</td>
+<td>true</td>
+<td>false</td>
+<td>No</td>
+<td>No</td>
+</tr>
+<tr>
+<td><code>ignoreTemperatureWhenOff</code></td>
+<td>When set, this will prevent the sending of temperature hex codes when the air-conditioner is off.</td>
 <td>true</td>
 <td>false</td>
 <td>No</td>

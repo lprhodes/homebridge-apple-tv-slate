@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Homebridge Broadlink RM Plugin - HomeKit RF and IR</title>
+    <title>Homebridge Appele TV Plugin</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -220,7 +220,7 @@
         </div>
       <div id="toc" class="toc-list-h1">
           <li>
-            <a href="#homebridge-broadlink-rm" class="toc-h1 toc-link" data-title="homebridge-broadlink-rm">Homebridge Broadlink RM</a>
+            <a href="#homebridge-apple-tv" class="toc-h1 toc-link" data-title="homebridge-apple-tv">Homebridge Apple TV</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#introduction" class="toc-h2 toc-link" data-title="introduction">Introduction</a>
@@ -246,94 +246,55 @@
                     <a href="#homebridge-config-location" class="toc-h2 toc-link" data-title="homebridge-config-location">Homebridge Config Location</a>
                   </li>
                   <li>
-                    <a href="#multiple-broadlink-rm-devices" class="toc-h2 toc-link" data-title="multiple-broadlink-rm-devices">Multiple Broadlink RM Devices</a>
-                  </li>
-                  <li>
-                    <a href="#device-discovery" class="toc-h2 toc-link" data-title="device-discovery">Device Discovery</a>
+                    <a href="#apple-tv-discovery" class="toc-h2 toc-link" data-title="apple-tv-discovery">Apple TV Discovery</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#hex-codes" class="toc-h1 toc-link" data-title="hex-codes">Hex Codes</a>
+            <a href="#commands" class="toc-h1 toc-link" data-title="commands">Commands</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#learning-ir-and-rf-hex-codes" class="toc-h2 toc-link" data-title="learning-ir-and-rf-hex-codes">Learning IR and RF hex codes</a>
+                    <a href="#supported-apple-tv-commands" class="toc-h2 toc-link" data-title="supported-apple-tv-commands">Supported Apple TV Commands</a>
                   </li>
                   <li>
-                    <a href="#using-hex-codes" class="toc-h2 toc-link" data-title="using-hex-codes">Using Hex Codes</a>
-                  </li>
-                  <li>
-                    <a href="#pronto-ir-codes" class="toc-h2 toc-link" data-title="pronto-ir-codes">Pronto IR Codes</a>
+                    <a href="#simple-command-structure" class="toc-h2 toc-link" data-title="simple-command-structure">Simple Command Structure</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#advanced-hex-structure" class="toc-h1 toc-link" data-title="advanced-hex-structure">Advanced Hex Structure</a>
+            <a href="#advanced-command-structure" class="toc-h1 toc-link" data-title="advanced-command-structure">Advanced Command Structure</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#repeat" class="toc-h2 toc-link" data-title="repeat">Repeat</a>
                   </li>
                   <li>
-                    <a href="#repeat-on-off" class="toc-h2 toc-link" data-title="repeat-on-off">Repeat On/Off</a>
+                    <a href="#multiple-commands" class="toc-h2 toc-link" data-title="multiple-commands">Multiple Commands</a>
                   </li>
                   <li>
-                    <a href="#multiple-hex-codes" class="toc-h2 toc-link" data-title="multiple-hex-codes">Multiple Hex Codes</a>
-                  </li>
-                  <li>
-                    <a href="#multiple-codes-amp-repeats" class="toc-h2 toc-link" data-title="multiple-codes-amp-repeats">Multiple Codes &amp; Repeats</a>
+                    <a href="#multiple-commands-amp-repeats" class="toc-h2 toc-link" data-title="multiple-commands-amp-repeats">Multiple Commands &amp; Repeats</a>
                   </li>
               </ul>
-          </li>
-          <li>
-            <a href="#common-accessory-options" class="toc-h1 toc-link" data-title="common-accessory-options">Common Accessory Options</a>
           </li>
           <li>
             <a href="#accessories" class="toc-h1 toc-link" data-title="accessories">Accessories</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#switch" class="toc-h2 toc-link" data-title="switch">switch</a>
-                  </li>
-                  <li>
-                    <a href="#outlet" class="toc-h2 toc-link" data-title="outlet">outlet</a>
-                  </li>
-                  <li>
-                    <a href="#fan" class="toc-h2 toc-link" data-title="fan">fan</a>
-                  </li>
-                  <li>
-                    <a href="#light" class="toc-h2 toc-link" data-title="light">light</a>
-                  </li>
-                  <li>
-                    <a href="#garage-door-opener" class="toc-h2 toc-link" data-title="garage-door-opener">garage-door-opener</a>
-                  </li>
-                  <li>
-                    <a href="#lock" class="toc-h2 toc-link" data-title="lock">lock</a>
-                  </li>
-                  <li>
-                    <a href="#window-covering" class="toc-h2 toc-link" data-title="window-covering">window-covering</a>
-                  </li>
-                  <li>
-                    <a href="#air-conditioner" class="toc-h2 toc-link" data-title="air-conditioner">air-conditioner</a>
-                  </li>
-                  <li>
-                    <a href="#learn-code" class="toc-h2 toc-link" data-title="learn-code">learn-code</a>
+                    <a href="#special-thanks" class="toc-h2 toc-link" data-title="special-thanks">Special Thanks</a>
                   </li>
               </ul>
           </li>
-          <li>
-            <a href="#special-thanks" class="toc-h1 toc-link" data-title="special-thanks">Special Thanks</a>
-          </li>
       </div>
         <ul class="toc-footer">
-            <li><a href='https://github.com/lprhodes/homebridge-broadlink-rm'>Back to GitHub</a></li>
+            <li><a href='https://github.com/lprhodes/homebridge-apple-tv'>Back to GitHub</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='homebridge-broadlink-rm'>Homebridge Broadlink RM</h1><h2 id='introduction'>Introduction</h2>
-<p>Welcome to the Broadlink RM Mini and Broadlink RM Pro plugin for <a href="https://github.com/nfarina/homebridge">Homebridge</a>.</p>
+        <h1 id='homebridge-apple-tv'>Homebridge Apple TV</h1><h2 id='introduction'>Introduction</h2>
+<p>Welcome to the Apple TV plugin for <a href="https://github.com/nfarina/homebridge">Homebridge</a>.</p>
 
-<p>This plugin allows you to control your RM Mini and RM Pro with HomeKit using the Home app and Siri.</p>
+<p>This plugin allows you to control your Apple TV with HomeKit using the Home app and Siri.</p>
 <h2 id='like-this-plugin'>Like this plugin?</h2>
 <p>If you like this plugin and want to show your support then please star the Github repo, or better yet; buy me a drink using <a href="https://paypal.me/lprhodes">Paypal</a> or <a href="https://goo.gl/bEn1RW">crypto currency</a>.</p>
 
@@ -350,21 +311,45 @@
 </ul>
 <h1 id='installation'>Installation</h1>
 <blockquote>
-<p>Example BroadlinkRM platform in the homebridge configuration:</p>
+<p>Example Apple TV platform in the homebridge configuration when Apple TV&#39;s haven&#39;t been paired yet:</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="w">  </span><span class="err">...</span><span class="w">
   </span><span class="s2">"platforms"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"platform"</span><span class="p">:</span><span class="s2">"BroadlinkRM"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"Broadlink RM"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"accessories"</span><span class="p">:[</span><span class="w">
+      </span><span class="s2">"platform"</span><span class="p">:</span><span class="s2">"AppleTV"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"Apple TV"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"devices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">],</span><span class="w">
+      </span><span class="s2">"accessories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"TV On/Off"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"type"</span><span class="p">:</span><span class="s2">"switch"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"data"</span><span class="p">:{</span><span class="w">
-            </span><span class="s2">"on"</span><span class="p">:</span><span class="s2">"2600500000012..."</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"off"</span><span class="p">:</span><span class="s2">"2600500000012..."</span><span class="w">
-          </span><span class="p">}</span><span class="w">
+          </span><span class="s2">"deviceID"</span><span class="p">:</span><span class="s2">"lounge"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"Up"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"up"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w"> 
+  </span><span class="err">...</span><span class="w">
+</span></code></pre>
+<blockquote>
+<p>Example Apple TV platform in the homebridge configuration including paired Apple TV&#39;s:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="w">  </span><span class="err">...</span><span class="w">
+  </span><span class="s2">"platforms"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"platform"</span><span class="p">:</span><span class="s2">"AppleTV"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"Apple TV"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"devices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lounge"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lounge Apple TV"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"credentials"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="s2">"accessories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"deviceID"</span><span class="p">:</span><span class="s2">"lounge"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"name"</span><span class="p">:</span><span class="s2">"Up"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"up"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">]</span><span class="w">
     </span><span class="p">}</span><span class="w">
@@ -373,87 +358,133 @@
 </span></code></pre>
 <ol>
 <li>Install homebridge using the <a href="https://github.com/nfarina/homebridge">directions on the project page</a></li>
-<li>Install this plugin using: <code>npm install -g homebridge-broadlink-rm</code></li>
+<li>Install this plugin using: <code>npm install -g homebridge-apple-tb</code></li>
 <li>Update your homebridge <code>config.json</code> file. See <a href="config-sample.json">config-sample.json</a> for examples.</li>
 </ol>
 
-<aside class="success">When you run homebridge, your Broadlink RM device will automatically discovered.</aside>
+<aside class="success">When you run homebridge, your Apple TV will be automatically discovered.</aside>
 <h1 id='advanced-setup'>Advanced Setup</h1><h2 id='homebridge-config-location'>Homebridge Config Location</h2>
 <p>Generally the plugin can find where your <code>config.json</code> lives as it commonly sits in the <code>.homebridge</code> directory of your user account. If you&#39;re doing something out of the ordinary however you may need to override this. You can do so by adding a <code>&quot;homebridgeDirectory&quot;: &quot;/path/to/config.json</code> key/value pair to the platform config.</p>
-<h2 id='multiple-broadlink-rm-devices'>Multiple Broadlink RM Devices</h2>
-<p>If you have multiple Broadlink RM devices (e.g. one in the bedroom, one in the lounge) then you can additionally specify the Broadlink RM&#39;s IP or MAC address in a <code>&quot;host&quot;</code> key/value pair on each accessory so that the accessory will use the correct device to send the IR or RF commands.</p>
-
-<p>If you wish to have multiple &quot;Learn Code&quot; accessories (e.g. for each device) then you can add accessories with a type of <code>learn-code</code> and then specify  <code>&quot;host&quot;</code> and <code>&quot;name&quot;</code> key/value pairs.</p>
-<h2 id='device-discovery'>Device Discovery</h2>
+<h2 id='apple-tv-discovery'>Apple TV Discovery</h2>
 <blockquote>
-<p>Include in the top of the platform config (not in any of the accessories).</p>
+<p>Include paired Apple TV&#39;s in the top of the platform config (not in any of the accessories).</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="err">...</span><span class="w">
-</span><span class="s2">"hosts"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span><span class="s2">"devices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="s2">"192.168.1.76"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"mac"</span><span class="p">:</span><span class="w"> </span><span class="s2">"34:ea:34:e7:d7:28"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"isRFSupported"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lounge"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lounge Apple TV"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"credentials"</span><span class="p">:</span><span class="w"> </span><span class="s2">"..."</span><span class="w">
   </span><span class="p">}</span><span class="w">
 </span><span class="p">],</span><span class="w">
 </span><span class="err">...</span><span class="w">
 </span></code></pre>
-<p>Generally Broadlink RM devices should be detected automatically. I&#39;ve resolved many issues related to this in recent releases however if your network doesn&#39;t support UDP for whatever reason then your device still won&#39;t be discovered.</p>
+<p>Apple TV&#39;s are automatically discovered when the plugin runs. Each discovered Apple TV will add a &quot;Pair&quot; switch to the Home app. You can then use this switch to pair with the Apple TV.</p>
 
-<p>To help combat this there&#39;s a <code>&quot;hosts&quot;</code> option that can be defined at the top level of the plugin config.</p>
-<h1 id='hex-codes'>Hex Codes</h1><h2 id='learning-ir-and-rf-hex-codes'>Learning IR and RF hex codes</h2>
+<p>When you toggle a &quot;Pair&quot; switch on, the Apple TV will show a pairing code. At the same time, a message will appear in the homebridge terminal asking you to type in the code. Once the correct code has been entered the credentials will be provided within an example JSON snippet that you can copy and paste into the <code>&quot;devices&quot;</code> option as shown on the right.</p>
+
+<p>You can hide &quot;Pair&quot; switches by adding <code>&quot;showPairSwitches&quot;: false</code> to the config.</p>
+<h1 id='commands'>Commands</h1><h2 id='supported-apple-tv-commands'>Supported Apple TV Commands</h2>
+<p>The following commands are supported by the plugin:</p>
+
+<table><thead>
+<tr>
+<th>command</th>
+<th>description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>up</td>
+<td>Performs the up key</td>
+</tr>
+<tr>
+<td>down</td>
+<td>Performs the down key</td>
+</tr>
+<tr>
+<td>left</td>
+<td>Performs the left key</td>
+</tr>
+<tr>
+<td>right</td>
+<td>Performs the right key</td>
+</tr>
+<tr>
+<td>menu</td>
+<td>Performs the menu key</td>
+</tr>
+<tr>
+<td>play</td>
+<td>Plays the current audio/video key</td>
+</tr>
+<tr>
+<td>pause</td>
+<td>Pauses the current audio/video</td>
+</tr>
+<tr>
+<td>select</td>
+<td>Performs the select key</td>
+</tr>
+<tr>
+<td>top_menu</td>
+<td>Goes to the app screen on the Apple TV or the TV app depending on how the button is configured in the setting.</td>
+</tr>
+<tr>
+<td>tv</td>
+<td>The same as <code>top_menu</code></td>
+</tr>
+<tr>
+<td>mic</td>
+<td>Simulates the press of the mic button</td>
+</tr>
+<tr>
+<td>siri</td>
+<td>The same as <code>mic</code></td>
+</tr>
+<tr>
+<td>next</td>
+<td>Skips to the next song or skips forward in a video</td>
+</tr>
+<tr>
+<td>previous</td>
+<td>Returns to the previous song or goes backwards in a video</td>
+</tr>
+<tr>
+<td>sleep</td>
+<td>Sends the Apple TV to sleep</td>
+</tr>
+<tr>
+<td>suspend</td>
+<td>The same as <code>sleep</code></td>
+</tr>
+<tr>
+<td>stop</td>
+<td>Stops a song or video</td>
+</tr>
+</tbody></table>
+<h2 id='simple-command-structure'>Simple Command Structure</h2>
 <blockquote>
-<p>Example &quot;Learn IR&quot; Logs</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">[</span><span class="err">Broadlink</span><span class="w"> </span><span class="err">RM</span><span class="p">]</span><span class="w"> </span><span class="err">Learn</span><span class="w"> </span><span class="err">Code</span><span class="w"> </span><span class="err">(ready)</span><span class="w">
-</span><span class="p">[</span><span class="err">Broadlink</span><span class="w"> </span><span class="err">RM</span><span class="p">]</span><span class="w"> </span><span class="err">Learn</span><span class="w"> </span><span class="err">Code</span><span class="w"> </span><span class="err">(learned</span><span class="w"> </span><span class="err">hex</span><span class="w"> </span><span class="err">code</span><span class="p">:</span><span class="w"> </span><span class="err">HEX_CODE)</span><span class="w">
-</span><span class="p">[</span><span class="err">Broadlink</span><span class="w"> </span><span class="err">RM</span><span class="p">]</span><span class="w"> </span><span class="err">Learn</span><span class="w"> </span><span class="err">Code</span><span class="w"> </span><span class="err">(complete)</span><span class="w">
-</span><span class="p">[</span><span class="err">Broadlink</span><span class="w"> </span><span class="err">RM</span><span class="p">]</span><span class="w"> </span><span class="err">Learn</span><span class="w"> </span><span class="err">Code</span><span class="w"> </span><span class="err">(stopped)</span><span class="w">
-</span></code></pre>
-<p>&quot;Learn&quot; and &quot;Scan Frequency&quot; accessories are automatically added to the Home app (so long as you&#39;ve not added either manually in the config).</p>
-
-<p>In the Home app, simply toggle the switch on, perform the IR or RF command in front of your Broadlink RM device and copy the HEX output from the homebridge log to wherever you want the code in the config.</p>
-
-<p>The switch will toggle off automatically once the code has been received. You can optionally stop attempting to learn a code by toggling the switch off yourself.</p>
-<h2 id='using-hex-codes'>Using Hex Codes</h2>
-<blockquote>
-<p>Hex code sent when an accessory is turned on, but not when it is turned off.</p>
+<p>Command sent when switch is turned on.</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="err">...</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ON_HEX_CODE"</span><span class="w">
+  </span><span class="s2">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"select"</span><span class="w">
   </span><span class="err">...</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
-<blockquote>
-<p>Sometimes, specific keys may be required such as on, open, or lock.</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="err">...</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"on"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ON_HEX_CODE"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"off"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OFF_HEX_CODE"</span><span class="p">,</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-  </span><span class="err">...</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<p>Wherever you see the ability to use a hex code in the documentation, the value can be either a hex code or an Advanced Hex Structure. </p>
-
-<p>Usually you will only need a hex code. Hex codes that are learned using the &quot;Learn IR&quot; and &quot;Scan RF&quot; switches.</p>
-<h2 id='pronto-ir-codes'>Pronto IR Codes</h2>
-<p>The plugin supports the use of Pronto codes; you can put them wherever you would normally put a Broadlink RM generated IR code. Pronto codes are automatically detected by their first 4 characters being 0 i.e. <code>0000</code>.</p>
-<h1 id='advanced-hex-structure'>Advanced Hex Structure</h1>
-<p>Hex objects allow multiple hex codes to be sent with <code>&quot;repeat&quot;</code>, <code>&quot;intervals&quot;</code> and <code>&quot;pause&quot;</code> options.</p>
+<p>The <code>&quot;command&quot;</code> option may be either a single command or an advanced command structure as shown below. </p>
+<h1 id='advanced-command-structure'>Advanced Command Structure</h1>
+<p>Command objects allow multiple commands to be sent with <code>&quot;repeat&quot;</code>, <code>&quot;interval&quot;</code> and <code>&quot;pause&quot;</code> options.</p>
 <h2 id='repeat'>Repeat</h2>
 <blockquote>
 <p>Example</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="err">...</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+  </span><span class="s2">"command"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ON_HEX_CODE"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"sendCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"menu"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"repeat"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
       </span><span class="s2">"interval"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.3</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
@@ -464,120 +495,85 @@
 <blockquote>
 <p>Result</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="err">Send</span><span class="w"> </span><span class="s2">"ON_HEX_CODE"</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="err">Send</span><span class="w"> </span><span class="s2">"menu"</span><span class="w">
 </span><span class="err">Wait</span><span class="w"> </span><span class="mf">0.3</span><span class="w"> </span><span class="err">seconds</span><span class="w">
-</span><span class="err">Send</span><span class="w"> </span><span class="s2">"ON_HEX_CODE"</span><span class="w">
+</span><span class="err">Send</span><span class="w"> </span><span class="s2">"menu"</span><span class="w">
 </span><span class="err">Wait</span><span class="w"> </span><span class="mf">0.3</span><span class="w"> </span><span class="err">seconds</span><span class="w">
-</span><span class="err">Send</span><span class="w"> </span><span class="s2">"ON_HEX_CODE"</span><span class="w">
+</span><span class="err">Send</span><span class="w"> </span><span class="s2">"menu"</span><span class="w">
 </span></code></pre>
-<p>Hex codes can be repeated multiple times. A delay can be added between each send of the hex code by adding an <code>&quot;interval&quot;</code> option.</p>
-<h2 id='repeat-on-off'>Repeat On/Off</h2>
+<p>Commands can be repeated multiple times. A delay can be added between each send of the command by adding an <code>&quot;interval&quot;</code> option.</p>
+<h2 id='multiple-commands'>Multiple Commands</h2>
 <blockquote>
 <p>Example</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="err">...</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"on"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ON_HEX_CODE"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"off"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OFF_HEX_CODE"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"sendCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"interval"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.3</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">]</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+  </span><span class="s2">"command"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"down"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pause"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.3</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"right"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pause"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.3</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"select"</span><span class="p">,</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
   </span><span class="err">...</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
 <p>Result</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="err">Send</span><span class="w"> </span><span class="s2">"OFF_HEX_CODE"</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="err">Send</span><span class="w"> </span><span class="s2">"down"</span><span class="w">
 </span><span class="err">Wait</span><span class="w"> </span><span class="mf">0.3</span><span class="w"> </span><span class="err">seconds</span><span class="w">
-</span><span class="err">Send</span><span class="w"> </span><span class="s2">"OFF_HEX_CODE"</span><span class="w">
+</span><span class="err">Send</span><span class="w"> </span><span class="s2">"right"</span><span class="w">
 </span><span class="err">Wait</span><span class="w"> </span><span class="mf">0.3</span><span class="w"> </span><span class="err">seconds</span><span class="w">
-</span><span class="err">Send</span><span class="w"> </span><span class="s2">"OFF_HEX_CODE"</span><span class="w">
+</span><span class="err">Send</span><span class="w"> </span><span class="s2">"select"</span><span class="w">
 </span></code></pre>
-<p>You can also have separate &quot;on&quot; and &quot;off&quot; structures.</p>
-<h2 id='multiple-hex-codes'>Multiple Hex Codes</h2>
+<p>You may wish for different commands to be sent at once. A delay can be added between each command by adding a <code>&quot;pause&quot;</code> option.</p>
+<h2 id='multiple-commands-amp-repeats'>Multiple Commands &amp; Repeats</h2>
 <blockquote>
 <p>Example</p>
 </blockquote>
 <pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="err">...</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"on"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ON_HEX_CODE_1"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pause"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.3</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ON_HEX_CODE_2"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pause"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.3</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ON_HEX_CODE_3"</span><span class="p">,</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"off"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OFF_HEX"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+  </span><span class="s2">"command"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"down"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"repeat"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"interval"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pause"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.3</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"right"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"pause"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.3</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"select"</span><span class="p">,</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
   </span><span class="err">...</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
 <p>Result</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="err">Send</span><span class="w"> </span><span class="s2">"ON_HEX_CODE_1"</span><span class="w">
-</span><span class="err">Wait</span><span class="w"> </span><span class="mf">0.3</span><span class="w"> </span><span class="err">seconds</span><span class="w">
-</span><span class="err">Send</span><span class="w"> </span><span class="s2">"ON_HEX_CODE_2"</span><span class="w">
-</span><span class="err">Wait</span><span class="w"> </span><span class="mf">0.3</span><span class="w"> </span><span class="err">seconds</span><span class="w">
-</span><span class="err">Send</span><span class="w"> </span><span class="s2">"ON_HEX_CODE_3"</span><span class="w">
-</span></code></pre>
-<p>You may wish for different hex codes to be sent at once. A delay can be added between each hex code by adding a <code>&quot;pause&quot;</code> option.</p>
-<h2 id='multiple-codes-amp-repeats'>Multiple Codes &amp; Repeats</h2>
-<blockquote>
-<p>Example</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="err">...</span><span class="w">
-  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"on"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ON_HEX_CODE_1"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"sendCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"interval"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.1</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pause"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.3</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ON_HEX_CODE_2"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"pause"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.3</span><span class="w">
-      </span><span class="p">},</span><span class="w">
-      </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ON_HEX_CODE_3"</span><span class="p">,</span><span class="w">
-      </span><span class="p">}</span><span class="w">
-    </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"off"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OFF_HEX"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-  </span><span class="err">...</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
-<blockquote>
-<p>Result</p>
-</blockquote>
-<pre class="highlight json tab-json"><code><span class="err">Send</span><span class="w"> </span><span class="s2">"ON_HEX_CODE_1"</span><span class="w">
+<pre class="highlight json tab-json"><code><span class="err">Send</span><span class="w"> </span><span class="s2">"down"</span><span class="w">
 </span><span class="err">Wait</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="err">seconds</span><span class="w">
-</span><span class="err">Send</span><span class="w"> </span><span class="s2">"ON_HEX_CODE_1"</span><span class="w">
+</span><span class="err">Send</span><span class="w"> </span><span class="s2">"down"</span><span class="w">
 </span><span class="err">Wait</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="err">seconds</span><span class="w">
-</span><span class="err">Send</span><span class="w"> </span><span class="s2">"ON_HEX_CODE_1"</span><span class="w">
+</span><span class="err">Send</span><span class="w"> </span><span class="s2">"down"</span><span class="w">
 </span><span class="err">Wait</span><span class="w"> </span><span class="mf">0.3</span><span class="w"> </span><span class="err">seconds</span><span class="w">
-</span><span class="err">Send</span><span class="w"> </span><span class="s2">"ON_HEX_CODE_2"</span><span class="w">
+</span><span class="err">Send</span><span class="w"> </span><span class="s2">"right"</span><span class="w">
 </span><span class="err">Wait</span><span class="w"> </span><span class="mf">0.3</span><span class="w"> </span><span class="err">seconds</span><span class="w">
-</span><span class="err">Send</span><span class="w"> </span><span class="s2">"ON_HEX_CODE_3"</span><span class="w">
+</span><span class="err">Send</span><span class="w"> </span><span class="s2">"select"</span><span class="w">
 </span></code></pre>
-<p>You may wish for different hex codes to be sent at once, with some repeating. A delay can be added between each hex code by adding a <code>&quot;pause&quot;</code> option. A delay can be added between each repeats of the same hex code by adding an <code>&quot;interval&quot;</code> option.</p>
-<h1 id='common-accessory-options'>Common Accessory Options</h1>
-<p>The following options are common between each accessory:</p>
+<p>You may wish for different commands to be sent at once, with some repeating. A delay can be added between each command by adding a <code>&quot;pause&quot;</code> option. A delay can be added between each repeat of the same command by adding an <code>&quot;interval&quot;</code> option.</p>
+<h1 id='accessories'>Accessories</h1>
+<p>Each accessory will show up in the Home app as a switch. Turn the switch on and the command is sent. The switch will toggle off automatically once the command has been sent. </p>
 
 <table><thead>
 <tr>
@@ -598,28 +594,28 @@
 <td>No</td>
 </tr>
 <tr>
-<td><code>type</code></td>
-<td>The type of accessory.</td>
-<td>&quot;switch&quot;</td>
+<td><code>command</code></td>
+<td>A single command or an advanced command structur.</td>
+<td>See above.</td>
 <td>-</td>
 <td>Yes</td>
 <td>No</td>
 </tr>
 <tr>
-<td><code>persistState</code></td>
-<td>Determines whether the state of accessory persists after homebridge has been restarted.</td>
-<td>false</td>
-<td>true</td>
-<td>No</td>
+<td><code>deviceID</code></td>
+<td>The <code>id</code> of the Apple TV as defined in the <code>devices</code> config option.</td>
+<td>&quot;lounge&quot;</td>
+<td>-</td>
 <td>Yes</td>
+<td>No</td>
 </tr>
 <tr>
-<td><code>resendHexAfterReload</code></td>
-<td>When persistState is true (it is by default) this will resend the hex code for the last known state if homebridge is restarted.</td>
-<td>true</td>
+<td><code>enableAutoOff</code></td>
+<td>Turn the switch off automatically after the command has been sent.</td>
 <td>false</td>
+<td>true</td>
 <td>No</td>
-<td>Yes</td>
+<td>No</td>
 </tr>
 <tr>
 <td><code>disableLogs</code></td>
@@ -627,7 +623,7 @@
 <td>true</td>
 <td>false</td>
 <td>No</td>
-<td>Yes</td>
+<td>No</td>
 </tr>
 <tr>
 <td><code>debug</code></td>
@@ -635,885 +631,11 @@
 <td>true</td>
 <td>false</td>
 <td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>host</code></td>
-<td>The IP or MAC address of the Broadlink RM device.</td>
-<td>192.168.1.32</td>
-<td>(auto-discovered)</td>
-<td>No</td>
 <td>No</td>
 </tr>
 </tbody></table>
-<h1 id='accessories'>Accessories</h1><h2 id='switch'>switch</h2>
-<p>Turn the switch on and the <code>on</code> hex code is sent, turn it off and the <code>off</code> hex code is sent.</p>
-
-<table><thead>
-<tr>
-<th>key</th>
-<th>description</th>
-<th>example</th>
-<th>default</th>
-<th>required</th>
-<th>unit tested</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>data</code></td>
-<td>Hex data stored as a key-value JSON object.</td>
-<td>See below.</td>
-<td>-</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>enableAutoOff</code></td>
-<td>Turn the switch off automatically when <code>onDuration</code> has been reached.</td>
-<td>true</td>
-<td>false</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>onDuration</code></td>
-<td>The amount of time before the switch automatically turns itself off (used in conjunction with <code>enableAutoOff</code>).</td>
-<td>5</td>
-<td>60</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>enableAutoOn</code></td>
-<td>Turn the switch on automatically when <code>offDuration</code> has been reached</td>
-<td>false</td>
-<td>true</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>offDuration</code></td>
-<td>The amount of time before the switch automatically turns itself on (used in conjunction with <code>enableAutoOn</code>).</td>
-<td>5</td>
-<td>60</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>pingIPAddress</code></td>
-<td>When an IP address is provided, it is pinged every second. If a response is received then the switch turns on, otherwise it turns off.</td>
-<td>&quot;192.167.1.77&quot;</td>
-<td>-</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>pingIPAddressStateOnly</code></td>
-<td>Using this option will prevent the hex code from being sent when the state changes</td>
-<td>true</td>
-<td>false</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>pingFrequency</code></td>
-<td>The frequency in seconds that the IP address should be pinged</td>
-<td>5</td>
-<td>1</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-</tbody></table>
-<h3 id='quot-data-quot-key-value-object'>&quot;data&quot; key-value object</h3>
-<table><thead>
-<tr>
-<th>key</th>
-<th>description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>on</code></td>
-<td>A hex code string or <a href="#hex-object-structure">object</a> to be sent when the switch is changed to the on position.</td>
-</tr>
-<tr>
-<td><code>off</code></td>
-<td>A hex code string or <a href="#hex-object-structure">object</a> to be sent when the switch is changed to the off position.</td>
-</tr>
-</tbody></table>
-<h2 id='outlet'>outlet</h2>
-<p>Turn the outlet on and the <code>on</code> hex code is sent, turn it off and the <code>off</code> hex code is sent.</p>
-
-<table><thead>
-<tr>
-<th>key</th>
-<th>description</th>
-<th>example</th>
-<th>default</th>
-<th>required</th>
-<th>unit tested</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>data</code></td>
-<td>Hex data stored as a key-value JSON object.</td>
-<td>See below.</td>
-<td>-</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>enableAutoOff</code></td>
-<td>Turn the outlet off automatically when <code>onDuration</code> has been reached.</td>
-<td>true</td>
-<td>false</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>onDuration</code></td>
-<td>The amount of time before the outlet automatically turns itself off (used in conjunction with <code>enableAutoOff</code>).</td>
-<td>5</td>
-<td>60</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>enableAutoOn</code></td>
-<td>Turn the outlet on automatically when <code>offDuration</code> has been reached</td>
-<td>false</td>
-<td>true</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>offDuration</code></td>
-<td>The amount of time before the outlet automatically turns itself on (used in conjunction with <code>enableAutoOn</code>).</td>
-<td>5</td>
-<td>60</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>pingIPAddress</code></td>
-<td>When an IP address is provided, it is pinged every second. If a response is received then the outlet&#39;s &quot;Outlet In Use&quot; shows as &quot;Yes&quot;, otherwise it shows as &quot;No&quot;.</td>
-<td>&quot;192.167.1.77&quot;</td>
-<td>-</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>pingIPAddressStateOnly</code></td>
-<td>Using this option will prevent the hex code from being sent when the state changes</td>
-<td>true</td>
-<td>false</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>pingFrequency</code></td>
-<td>The frequency in seconds that the IP address should be pinged</td>
-<td>5</td>
-<td>1</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-</tbody></table>
-<h3 id='quot-data-quot-key-value-object-2'>&quot;data&quot; key-value object</h3>
-<table><thead>
-<tr>
-<th>key</th>
-<th>description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>on</code></td>
-<td>A hex code string or <a href="#hex-object-structure">object</a> to be sent when the plug is changed to the on position.</td>
-</tr>
-<tr>
-<td><code>off</code></td>
-<td>A hex code string or <a href="#hex-object-structure">object</a> to be sent when the plug is changed to the off position.</td>
-</tr>
-</tbody></table>
-<h2 id='fan'>fan</h2>
-<p>Turn the fan on and the <code>on</code> hex code is sent, turn it off and the <code>off</code> hex code is sent.</p>
-
-<p>Additionally, Siri supports the toggling of the swing mode and setting of the fan speed as a %.</p>
-
-<p>If you don&#39;t specify every fan speed then the accessory will choose the hex code of the fan speed closest to the one requested. e.g. If you only specify fan speeds of 10%, 50% and 100% then ask &quot;Set Fan to 40%&quot; then the hex code for 50% will be used.</p>
-
-<table><thead>
-<tr>
-<th>key</th>
-<th>description</th>
-<th>example</th>
-<th>default</th>
-<th>required</th>
-<th>unit tested</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>data</code></td>
-<td>Hex data stored as a key-value JSON object.</td>
-<td>See below.</td>
-<td>-</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>hideSwingMode</code></td>
-<td>Determines whether we should hide the swing mode UI or not.</td>
-<td>true</td>
-<td>false</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>hideRotationDirection</code></td>
-<td>Determines whether we should hide the rotation direction UI or not.</td>
-<td>true</td>
-<td>false</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-</tbody></table>
-<h3 id='quot-data-quot-key-value-object-3'>&quot;data&quot; key-value object</h3>
-<table><thead>
-<tr>
-<th>key</th>
-<th>description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>on</code></td>
-<td>A hex code string or <a href="#hex-object-structure">object</a> to be sent when the switch is changed to the on position.</td>
-</tr>
-<tr>
-<td><code>off</code></td>
-<td>A hex code string or <a href="#hex-object-structure">object</a> to be sent when the switch is changed to the off position.</td>
-</tr>
-<tr>
-<td><code>clockwise</code></td>
-<td>A hex code string or <a href="#hex-object-structure">object</a> to be sent to make the fan go clockwise.</td>
-</tr>
-<tr>
-<td><code>counterClockwise</code></td>
-<td>A hex code string or <a href="#hex-object-structure">object</a> to be sent to make the fan go counter clockwise.</td>
-</tr>
-<tr>
-<td><code>swingToggle</code></td>
-<td>A hex code string or <a href="#hex-object-structure">object</a> used to toggle the swing mode on/off.</td>
-</tr>
-<tr>
-<td><code>fanSpeedX</code></td>
-<td>A hex code string or <a href="#hex-object-structure">object</a> where X is any fan speed you wish to support e.g. &quot;fanSpeed100&quot;.</td>
-</tr>
-</tbody></table>
-<h2 id='light'>light</h2>
-<p>Turn the light on and the <code>defaultBrightness</code> is set unless <code>useLastKnownBrightness</code> is set to true in which case the last brightness that was set will be used.</p>
-
-<p>Turn the light off and the <code>off</code> hex code is sent.</p>
-
-<p>If you don&#39;t specify every brightness then the accessory will choose the hex code of the brightness closest to the one requested. e.g. If you only specify brightness values of 10%, 50% and 100% then ask &quot;Set light to 40%&quot; then the hex code for 50% will be used.</p>
-
-<table><thead>
-<tr>
-<th>key</th>
-<th>description</th>
-<th>example</th>
-<th>default</th>
-<th>required</th>
-<th>unit tested</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>data</code></td>
-<td>Hex data stored as a key-value JSON object.</td>
-<td>See below.</td>
-<td>-</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>defaultBrightness</code></td>
-<td>The default brightness to be set when you turn the light on.</td>
-<td>70</td>
-<td>100</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>useLastKnownBrightness</code></td>
-<td>The last known brightness will be used instead of the defaultBrightness when turning a light back on.</td>
-<td>false</td>
-<td>true</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>onDelay</code></td>
-<td>If the <code>on</code> hex data is specified in the <code>data</code> value, this will determine the seconds between when the on code and the requested brightness code are sent.</td>
-<td>1</td>
-<td>0.1</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>enableAutoOff</code></td>
-<td>Turn the light off automatically when <code>onDuration</code> has been reached.</td>
-<td>true</td>
-<td>false</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>onDuration</code></td>
-<td>The amount of time before the switch automatically turns itself off (used in conjunction with <code>enableAutoOff</code>).</td>
-<td>5</td>
-<td>60</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>enableAutoOn</code></td>
-<td>Turn the light on automatically when <code>offDuration</code> has been reached</td>
-<td>false</td>
-<td>true</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>offDuration</code></td>
-<td>The amount of time before the switch automatically turns itself on (used in conjunction with <code>enableAutoOn</code>).</td>
-<td>5</td>
-<td>60</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-</tbody></table>
-<h3 id='quot-data-quot-key-value-object-4'>&quot;data&quot; key-value object</h3>
-<table><thead>
-<tr>
-<th>key</th>
-<th>description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>off</code></td>
-<td>A hex code string or <a href="#hex-object-structure">object</a> to be sent when the switch is changed to the off position.</td>
-</tr>
-<tr>
-<td><code>brightnessX</code></td>
-<td>A hex code string or <a href="#hex-object-structure">object</a> where X is any brightness you wish to support e.g. &quot;brightness100&quot;.</td>
-</tr>
-<tr>
-<td><code>hueX</code></td>
-<td>A hex code string or <a href="#hex-object-structure">object</a> where X is any hue you wish to support between 0 and 359 e.g. &quot;hue42&quot;.</td>
-</tr>
-<tr>
-<td><code>on</code></td>
-<td>If set, this hex code shall be sent before brightness or hue is set using <code>onDelay</code> to create a delay between sends.</td>
-</tr>
-</tbody></table>
-<h2 id='garage-door-opener'>garage-door-opener</h2>
-<p>Set the switch to open and the <code>open</code> hex code is sent, set it to close and the <code>close</code> hex code is sent.</p>
-
-<table><thead>
-<tr>
-<th>key</th>
-<th>description</th>
-<th>example</th>
-<th>default</th>
-<th>required</th>
-<th>unit tested</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>data</code></td>
-<td>Hex data stored as a key-value JSON object.</td>
-<td>See below.</td>
-<td>-</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>openCloseDuration</code></td>
-<td>The amount of time in seconds that the accessory will show as &quot;Opening&quot; and &quot;Closing&quot;</td>
-<td>10</td>
-<td>8</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>openDuration</code></td>
-<td>The amount of time in seconds that the accessory will show as &quot;Opening&quot;</td>
-<td>10</td>
-<td>8</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>closeDuration</code></td>
-<td>The amount of time in seconds that the accessory will show as &quot;Closing&quot;</td>
-<td>10</td>
-<td>8</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>autoCloseDelay</code></td>
-<td>The amount of time in seconds that the accessory will wait before automatically initiating the &quot;Closing&quot; state.</td>
-<td>10</td>
-<td>30</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-</tbody></table>
-<h3 id='quot-data-quot-key-value-object-5'>&quot;data&quot; key-value object</h3>
-<table><thead>
-<tr>
-<th>key</th>
-<th>description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>open</code></td>
-<td>A hex code string or <a href="#hex-object-structure">object</a> to be sent when the switch is changed to the open position.</td>
-</tr>
-<tr>
-<td><code>close</code></td>
-<td>A hex code string or <a href="#hex-object-structure">object</a> to be sent when the switch is changed to the close position.</td>
-</tr>
-<tr>
-<td><code>unlock</code></td>
-<td>A hex code string or <a href="#hex-object-structure">object</a> to be sent when the switch is set to unlock.</td>
-</tr>
-<tr>
-<td><code>lock</code></td>
-<td>A hex code string or <a href="#hex-object-structure">object</a> to be sent when the switch is set to lock.</td>
-</tr>
-</tbody></table>
-<h2 id='lock'>lock</h2>
-<p>Set the switch to unlock and the <code>unlock</code> hex code is sent, set it to lock and the <code>lock</code> hex code is sent.</p>
-
-<table><thead>
-<tr>
-<th>key</th>
-<th>description</th>
-<th>example</th>
-<th>default</th>
-<th>required</th>
-<th>unit tested</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>data</code></td>
-<td>Hex data stored as a key-value JSON object.</td>
-<td>See below.</td>
-<td>-</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>autoLockDelay</code></td>
-<td>The amount of time in seconds that the accessory will wait before automatically initiating the &quot;Lock&quot; state.</td>
-<td>10</td>
-<td>30</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>lockDuration</code></td>
-<td>The amount of time in seconds that the accessory will show a status of &quot;Locking&quot; for.</td>
-<td>2</td>
-<td>1</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>unlockDuration</code></td>
-<td>The amount of time in seconds that the accessory will show a status of &quot;Unlocking&quot; for.</td>
-<td>2</td>
-<td>1</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-</tbody></table>
-<h3 id='quot-data-quot-key-value-object-6'>&quot;data&quot; key-value object</h3>
-<table><thead>
-<tr>
-<th>key</th>
-<th>description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>unlock</code></td>
-<td>A hex code string or <a href="#hex-object-structure">object</a> to be sent when the switch is set to unlock.</td>
-</tr>
-<tr>
-<td><code>lock</code></td>
-<td>A hex code string or <a href="#hex-object-structure">object</a> to be sent when the switch is set to lock.</td>
-</tr>
-</tbody></table>
-<h2 id='window-covering'>window-covering</h2>
-<p>The window-covering accessory designed to be used by IR/RF controlled blinds/shades/shutters.</p>
-
-<p>The accessory will determine how long the window-covering should continue opening/closing for based on the previous position and target position along with the <code>totalDurationOpen</code> and <code>totalDurationClose</code> values.</p>
-
-<p>The <code>window-covering</code> will first send the <code>open</code>/<code>close</code> hex code, wait for the calculated amount of time as explained above, then send the <code>stop</code> hex code. Concurrently, the % shown in the Home app will be updated at intervals.</p>
-
-<table><thead>
-<tr>
-<th>key</th>
-<th>description</th>
-<th>example</th>
-<th>default</th>
-<th>required</th>
-<th>unit tested</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>data</code></td>
-<td>Hex data stored as a key-value JSON object.</td>
-<td>See below.</td>
-<td>-</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>totalDurationOpen</code></td>
-<td>The amount of time in seconds it takes to open the window-covering completely.</td>
-<td>30</td>
-<td>-</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>totalDurationClose</code></td>
-<td>The amount of time in seconds it takes to close the window-covering completely. The value shall be used to determine what percentage to show in the Home app as well as when to send the <code>stop</code> code.</td>
-<td>30</td>
-<td>-</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>initialDelay</code></td>
-<td>This allows multiple <code>window-covering</code> accessories to be updated at the same time without RF/IR interference from one-another by adding an offset to each <code>window-covering</code> accessory</td>
-<td>1</td>
-<td>0.1</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>sendStopAt0</code></td>
-<td>Determines where the stop command is sent when the blind position reaches 0%</td>
-<td>true</td>
-<td>false</td>
-<td>No</td>
-<td>No</td>
-</tr>
-<tr>
-<td><code>sendStopAt100</code></td>
-<td>Determines where the stop command is sent when the blind position reaches 100%</td>
-<td>true</td>
-<td>false</td>
-<td>No</td>
-<td>No</td>
-</tr>
-</tbody></table>
-<h3 id='quot-data-quot-key-value-object-7'>&quot;data&quot; key-value object</h3>
-<table><thead>
-<tr>
-<th>key</th>
-<th>description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>open</code></td>
-<td>A hex code string or <a href="#hex-object-structure">object</a> to be sent when the window-covering is requested to open.</td>
-</tr>
-<tr>
-<td><code>close</code></td>
-<td>A hex code string or <a href="#hex-object-structure">object</a> to be sent when the window-covering is requested to close.</td>
-</tr>
-<tr>
-<td><code>stop</code></td>
-<td>A hex code string or <a href="#hex-object-structure">object</a> to be sent when the window-covering is stopped automatically.</td>
-</tr>
-<tr>
-<td><code>openCompletely</code></td>
-<td>When set, this hex code will be sent when a value of 100% is requested.</td>
-</tr>
-<tr>
-<td><code>closeCompletely</code></td>
-<td>When set, this hex code will be sent when a value of 0% is requested.</td>
-</tr>
-</tbody></table>
-<h2 id='air-conditioner'>air-conditioner</h2>
-<p>This allows you to send a hex code for any temperature that you&#39;ve defined a hex code for. If you simply want to heat up or cool down a room (and not learn every single temperature code) you can just set hex codes for the lowest and highest temperatures and those will be used whatever temperature you request.</p>
-
-<table><thead>
-<tr>
-<th>key</th>
-<th>description</th>
-<th>example</th>
-<th>default</th>
-<th>required</th>
-<th>unit tested</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>data</code></td>
-<td>Hex data stored as a key-value JSON object.</td>
-<td>See below.</td>
-<td>-</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>minTemperature</code></td>
-<td>The minimum temperature you can set. This should be 10C or less.</td>
-<td>10</td>
-<td>-15</td>
-<td>No</td>
-<td></td>
-</tr>
-<tr>
-<td><code>maxTemperature</code></td>
-<td>The maximum temperature you can set.</td>
-<td>28</td>
-<td>50</td>
-<td>No</td>
-<td></td>
-</tr>
-<tr>
-<td><code>temperatureDisplayUnits</code></td>
-<td>Specify Celsius or Fahrenheit.</td>
-<td>F</td>
-<td>C</td>
-<td>No</td>
-<td></td>
-</tr>
-<tr>
-<td><code>defaultCoolTemperature</code></td>
-<td>The temperature that will be requested when no hex code exists for the specified temperature.</td>
-<td>14</td>
-<td>16</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>defaultHeatTemperature</code></td>
-<td>The temperature that will be requested when no hex code exists for the specified temperature.</td>
-<td>28</td>
-<td>30</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>heatTemperature</code></td>
-<td>The temperature at which we change the UI to show that we&#39;re heating. Also used to determine whether <code>defaultCoolTemperature</code> or <code>defaultHeatTemperature</code> is used when hex data for a particular temperature is missing.</td>
-<td>20</td>
-<td>22</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>replaceAutoMode</code></td>
-<td>When we turn on the thermostat with Siri it sets the mode as <code>auto</code>, so we set the mode to <code>cool</code> or <code>heat</code> instead depending on the value of this key.</td>
-<td>&quot;heat&quot;</td>
-<td>&quot;cool&quot;</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>pseudoDeviceTemperature</code></td>
-<td>Some RM devices don&#39;t have a built in thermometer, when set this prevents the device thermometer from being accessed and shows the provided value instead.</td>
-<td>0</td>
-<td>0</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>autoHeatTemperature</code></td>
-<td>When the temperature is below this value, the heat mode will be enabled.</td>
-<td>18</td>
-<td>-</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>autoCoolTemperature</code></td>
-<td>When the temperature is above this value, the cool mode will enabled.</td>
-<td>27</td>
-<td>-</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>minimumAutoOnOffDuration</code></td>
-<td>The minimum amount of time that the air-conditioner must remain on or off after having been automatically turned on or off.</td>
-<td>300</td>
-<td>120</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>temperatureFilePath</code></td>
-<td>A path to a file containing a number that represents the current temperature reported to the accessory.</td>
-<td>&quot;/Users/ username/ HomeKit/ temperature/&quot;</td>
-<td>-</td>
-<td>No</td>
-<td>No</td>
-</tr>
-<tr>
-<td><code>temperatureAdjustment</code></td>
-<td>The number of degrees that the reported temperature should be offset by.</td>
-<td>3</td>
-<td>0</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>turnOnWhenOff</code></td>
-<td>If the air-con unit state is off then an <code>on</code> code shall be sent before sending the temperature code.</td>
-<td>true</td>
-<td>false</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>preventResendHex</code></td>
-<td>Determines whether the temperature hex code should be resent when requesting the same temperature as the last requested temperature.</td>
-<td>true</td>
-<td>false</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>autoSwitchName</code></td>
-<td>The name of an switch accessory that can be used to enable/disable the auto on/off functionality. To be used in conjunction with <code>autoHeatTemperature</code> and <code>autoCoolTemperature</code>.</td>
-<td>&quot;Air-Con Auto&quot;</td>
-<td>-</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr>
-<td><code>temperatureUpdateFrequency</code></td>
-<td>The frequency in seconds for which the temperature shall be requested.</td>
-<td>20</td>
-<td>10</td>
-<td>No</td>
-<td>No</td>
-</tr>
-<tr>
-<td><code>sendTemperatureOnlyWhenOff</code></td>
-<td>When set, this will prevent the air-conditioner from being turned when setting a temperature while the air-conditioner is off.</td>
-<td>true</td>
-<td>false</td>
-<td>No</td>
-<td>No</td>
-</tr>
-<tr>
-<td><code>ignoreTemperatureWhenOff</code></td>
-<td>When set, this will prevent the sending of temperature hex codes when the air-conditioner is off.</td>
-<td>true</td>
-<td>false</td>
-<td>No</td>
-<td>No</td>
-</tr>
-</tbody></table>
-<h3 id='mqtt-temperature-support'>mqtt temperature support</h3>
-<p>You may subscribe to an mqtt topic to receive temperaturee updates. To do so you must specify the following configuration options:</p>
-
-<ul>
-<li><code>mqttURL</code></li>
-<li><code>mqttTopic</code></li>
-</ul>
-
-<p>It&#39;s also recommended that you use authentication by specifying these additional configuration options:</p>
-
-<ul>
-<li><code>mqttUsername</code></li>
-<li><code>mqttPassword</code></li>
-</ul>
-
-<p>The value set on the topic is expected to be a string value. e.g. &quot;24&quot; or an object that includes a key of &quot;temperature&quot;, &quot;Temperature&quot;, &quot;Temp&quot; or &quot;temp&quot;.</p>
-<h3 id='air-conditioner-notes'>air-conditioner Notes</h3>
-<p>There looks to be a glitch in the Apple Home app in that nothing happens when setting the mode to Off when you&#39;ve turned the thermostat on by setting a specific temperature. Siri and other HomeKit apps don&#39;t have the same glitch. As a work-around you can just select a different mode and then press Off. This only happens the first time after launching homebridge.</p>
-
-<p>Adding <code>autoHeatTemperature</code> and <code>autoCoolTemperature</code> can help automatically maintain a temperature. When the temperature falls below and hits above the <code>autoHeatTemperature</code> and <code>autoCoolTemperature</code> temperatures the accessory will automatically set the temperature to whatever the <code>defaultHeatTemperature</code> and <code>defaultCoolTemperature</code> is. The accessory will then keep checking (every <code>autoMinimumDuration</code> seconds) and if the temperature changes to be between the <code>autoHeatTemperature</code> and <code>autoCoolTemperature</code> temperatures then it will turn itself off. Something to note however is that if you decide to set a new temperature when the accessory has automatically turned itself on then it will still attempt to turn itself back off. To stop this automatic turn-off you can turn off the accessory manually and then turn it back on manually. Bare in mind that while the Home app may say 22C, the temperature may actually be 22.4C and if the Home app says 23C then it may actually be 22.5C.</p>
-<h3 id='quot-data-quot-key-value-object-8'>&quot;data&quot; key-value object</h3>
-<table><thead>
-<tr>
-<th>key</th>
-<th>description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>on</code></td>
-<td>An optional hex code to be used in conjunction with the <code>turnOnWhenOff</code> configuration.</td>
-</tr>
-<tr>
-<td><code>off</code></td>
-<td>A hex code string or <a href="#hex-object-structure">object</a> to be sent when the air conditioner is asked to be turned off.</td>
-</tr>
-<tr>
-<td><code>temperatureX</code></td>
-<td>Where X is any temperature you wish to support e.g. <code>temperature30</code>. See below.</td>
-</tr>
-</tbody></table>
-<h3 id='quot-temperaturex-quot-key-value-object'>&quot;temperatureX&quot; key-value object</h3>
-<table><thead>
-<tr>
-<th>key</th>
-<th>description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>data</code></td>
-<td>Hex data stored as string.</td>
-</tr>
-<tr>
-<td><code>pseudo-mode</code> (Optional)</td>
-<td>The mode we set when this hex is sent. i.e. <code>heat</code>, <code>cool</code> or <code>auto</code>. For graphical purposes only (hence use of the term &quot;pseudo&quot;).  By default this will use the current temperature and the target temperature to determine whether to set the mode as <code>heat</code> or <code>cool</code>.</td>
-</tr>
-</tbody></table>
-<h2 id='learn-code'>learn-code</h2>
-<p>You do not need to add this accessory type yourself as we add one automatically. However if you have multiple Broadlink RM devices then it may be useful to specify multiple devices with the <code>learn-code</code> type along with a <code>&quot;host&quot;</code> value so that you can learn from each of them.</p>
-
-<table><thead>
-<tr>
-<th>key</th>
-<th>description</th>
-<th>example</th>
-<th>default</th>
-<th>required</th>
-</tr>
-</thead><tbody>
-<tr>
-<td><code>enableAutoOff</code></td>
-<td>Allows the learn-code accessory to turn off automatically after a given amount of time or when a hex code has been received.</td>
-<td>false</td>
-<td>true</td>
-<td>No</td>
-</tr>
-<tr>
-<td><code>onDuration</code></td>
-<td>The amount of time before the switch automatically turns itself off (used in conjunction with <code>enableAutoOff</code>).</td>
-<td>5</td>
-<td>60</td>
-<td>No</td>
-</tr>
-<tr>
-<td><code>scanFrequency</code></td>
-<td>This changes the type of learning to be the same as the default &quot;Scan Frequency&quot;</td>
-<td>true</td>
-<td>false</td>
-<td>No</td>
-</tr>
-</tbody></table>
-<h1 id='special-thanks'>Special Thanks</h1>
-<p>Thanks to <a href="https://github.com/tattn/homebridge-rm-mini3">@tattn</a>, <a href="https://github.com/PJCzx/homebridge-thermostat">@PJCzx</a> and <a href="https://github.com/momodalo/broadlinkjs">@momodalo</a> whose time and effort got me started.</p>
+<h2 id='special-thanks'>Special Thanks</h2>
+<p>Thanks to @edc1591 (https://github.com/edc1591/node-appletv) who saved me a lot of time by creating a node module for controlling the Apple TV.</p>
 
       </div>
       <div class="dark-box">

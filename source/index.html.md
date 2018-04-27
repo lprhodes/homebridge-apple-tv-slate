@@ -90,7 +90,7 @@ You can keep informed about HomeKit, homebridge and homebridge plugins by subscr
 ```
 
 1. Install homebridge using the [directions on the project page](https://github.com/nfarina/homebridge)
-2. Install this plugin using: `npm install -g homebridge-apple-tb`
+2. Install this plugin using: `npm install -g homebridge-apple-tv`
 3. Update your homebridge `config.json` file. See [config-sample.json](config-sample.json) for examples.
 
 <aside class="success">When you run homebridge, your Apple TV will be automatically discovered.</aside>
